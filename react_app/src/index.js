@@ -1,13 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
+// const myElement = React.createElement("h1", null, "Welcome to React");
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// JSX
+// const myElement = <h1>Welcome to React Training by Koenig</h1>
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <React.StrictMode>
+  <React.Fragment>
     <App />
-  </React.StrictMode>
+  </React.Fragment>
 );
-
