@@ -31,7 +31,7 @@ const data = {
   trainingCost: 5000.0,
 };
 const Technogoies = ["HTML5", "CSS3", "Bootstrap"];
-const myLink = "http://beta-labs.in/";
+const myLink = "http://beta-labs	.in/";
 
 const today = new Date().toDateString();
 
