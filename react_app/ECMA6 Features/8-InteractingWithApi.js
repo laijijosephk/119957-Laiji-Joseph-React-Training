@@ -6,14 +6,25 @@
 const API_URL = "https://jsonplaceholder.typicode.com/users";
 
 function getApiData(url) {
-  setTimeout(() => {
-    fetch(url)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => displayData(data))
-      .catch((err) => console.log(err));
-  }, 3000);
+
+  // --Pending State Example---
+
+  // setTimeout(() => {
+    // fetch(url)
+    //   .then((res) => {
+    //     return res.json();
+    //   })
+    //   .then((data) => displayData(data))
+    //   .catch((err) => console.log(err));
+  // }, 3000);
+
+
+   fetch(url)
+     .then((res) => {
+       return res.json();
+     })
+     .then((data) => displayData(data))
+     .catch((err) => console.log(err));
 }
 
 getApiData(API_URL);

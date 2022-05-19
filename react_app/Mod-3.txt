@@ -1,0 +1,95 @@
+App.js
+
+// Root Component
+import logo from "./logo.png";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+const myElement = (
+  <div className="container">
+    <h1 className="text-primary ">This is Heading</h1>
+    <p className="bg-dark text-info p-4">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt aut
+      saepe eos laborum dolorem architecto deleniti est accusamus, blanditiis
+      repellat?
+    </p>
+    <ul>
+      <li>Data-1</li>
+      <li>Data-2</li>
+      <li>Data-3</li>
+      <li>Data-4</li>
+      <li>Data-5</li>
+    </ul>
+  </div>
+);
+
+const name = "Pankaj Kapoor";
+const participantName = "Laiji Joseph";
+
+const data = {
+  trainingName: "ReactJS",
+  trainingDuration: 40,
+  trainingCost: 5000.0,
+};
+const Technogoies = ["HTML5", "CSS3", "Bootstrap"];
+const myLink = "http://beta-labs	.in/";
+
+const today = new Date().toDateString();
+
+const isLoading = false;
+
+const myStyle = {
+  color: "orange",
+  backgroundColor: "black",
+  fontFamily: "arial",
+  fontSize: 20,
+  textAlign: "center",
+  padding: 20,
+};
+
+function App() {
+  return (
+    <div>
+      <h2
+        style={{
+          color: "white",
+          backgroundColor: "blue",
+          textAlign: "center",
+          padding: 20,
+        }}
+      >
+        Trainer Name: {name}{" "}
+      </h2>
+      <p style={myStyle}>Participant's Name: {participantName}</p>
+      {2 + 2}
+      <p id="para-1">
+        Training Name:{data.trainingName}
+        <br />
+        Training Duration:{data.trainingDuration}
+        <br />
+        Training Cost:{data.trainingCost}
+      </p>
+
+      <ul>
+        {Technogoies.map((tech, i) => (
+          <li key={i}>{tech}</li>
+        ))}
+      </ul>
+      <a href={myLink}> Beta-Labs</a>
+      <img src={process.env.PUBLIC_URL + "assets/logo.png"} alt="" />
+
+      <img src={logo} alt="" />
+      <p>Today's Date: {today}</p>
+
+      {isLoading ? "Loading is True" : "Loading is False"}
+
+      {myElement}
+    </div>
+  );
+}
+
+export default App;
+
+// There are three way to style an Elements
+// 1. Inline style using style attribute
+// 2. Internal Styling
+// 3. External Styling

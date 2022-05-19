@@ -10,3 +10,4 @@ let displayDetails = function(){
 
 let data = { name, job, country, displayDetails,tech };
 console.log(data);
+
