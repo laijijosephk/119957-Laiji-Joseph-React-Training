@@ -10,12 +10,16 @@ export default function Summary(props) {
       <td>{name}</td>
       <td>{name.length}</td>
       <td>
-        <CallbackButton callback={props.reverseCallback} />
+        <CallbackButton
+          theme="primary"
+          text="Reverse"
+          callback={props.reverseCallback}
+        />
       </td>
       <td>
         <CallbackButton
-          theme={345}
-          text={123}
+          theme="info"
+          text="Promote"
           callback={() => props.promoteCallback(name)}
         />
       </td>
