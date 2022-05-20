@@ -16,8 +16,13 @@ import Todo from "./components/Todo";
 import TextAnalyzer from "./TextAnalyzer-Assignment";
 import { Provider } from "react-redux";
 import store from "./components/redux/store";
-import CakeContainer from "./components/redux/CakeContainer";
-import CakeContainer2 from "./components/redux/CakeContainer2";
+import CakeContainer from "./components/redux/cake/CakeContainer";
+import CakeContainer2 from "./components/redux/cake/CakeContainer2";
+import UserContainer from "./components/redux/user/UserContainer";
+import counterContainer from "./components/redux/counter/counterContainer";
+import CounterContainer from "./components/redux/counter/counterContainer";
+import WithoutContextDemo from "./components/context/WithoutContextDemo";
+import ContextDemo from "./components/context/ContextDemo";
 
 let names = ["John", "Peter", "Parker", "Sarah"];
 
@@ -81,12 +86,16 @@ function App() {
       {/* <TextAnalyzer /> */}
       {/* <Posts /> */}
 
-      <Provider store={store}>
-        <h1 className="text-center bg-danger text-white p-2 ">Cake Shop </h1>
+      {/* <Provider store={store}> */}
+      {/* <h2 className="text-center bg-danger text-white p-1 rounded border">Cake Shop </h2>
         <CakeContainer />
         <hr />
-        <CakeContainer2 />
-      </Provider>
+        <CakeContainer2 /> */}
+      {/* <UserContainer /> */}
+      {/* <CounterContainer />
+      </Provider> */}
+
+      <ContextDemo />
     </div>
   );
 }
