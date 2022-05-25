@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom/client";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
 import "./App.css";
+
 import StateinClass from "./components/StateinClass";
 import LifeCycle from "./components/stateManagement/LifeCycle";
-import Posts from "./components/stateManagement/Posts";
+// import Posts from "./components/stateManagement/Posts";
 import UseEffectDemo from "./components/stateManagement/UseEffectDemo";
 import UseRefDemo from "./components/stateManagement/UseRefDemo";
 import UseRefDemo2 from "./components/stateManagement/UseRefDemo2";
@@ -23,6 +23,19 @@ import counterContainer from "./components/redux/counter/counterContainer";
 import CounterContainer from "./components/redux/counter/counterContainer";
 import WithoutContextDemo from "./components/context/WithoutContextDemo";
 import ContextDemo from "./components/context/ContextDemo";
+import TestApi from "./components/TestApi";
+import Posts from "./components/Pages/Posts";
+
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Menu from "./components/Menu";
+import Home from "./components/Pages/Home";
+import PageNotFound from "./components/Pages/PageNotFound";
+import PostDetails from "./components/Pages/PostDetails";
+import AllPosts from "./components/Pages/AllPosts";
+import AddPost from "./components/Pages/AddPost";
+import Login from "./components/Pages/Login";
+import Register from "./components/Pages/Register";
+import CheckProps from "./components/CheckProps";
 
 let names = ["John", "Peter", "Parker", "Sarah"];
 
@@ -71,8 +84,9 @@ function App() {
             </tr>
           ))}
         </tbody>
-      </table>
-      <button onClick={popup}>Click Me</button> */}
+      </table>  */}
+      {/* <button onClick={popup}>Click Me</button>  */}
+      <CheckProps />
       {/* <UseStateDemo /> */}
       {/* <UseStateDemo1 /> */}
       {/* <UseStateasProps /> */}
@@ -95,7 +109,23 @@ function App() {
       {/* <CounterContainer />
       </Provider> */}
 
-      <ContextDemo />
+      {/* <ContextDemo /> */}
+      {/* <TestApi /> */}
+
+      {/* <BrowserRouter>
+        <Menu />
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/posts/*" element={<Posts />} />
+          <Route path="/allposts" element={<AllPosts />} />
+          <Route path="/allposts/:id" element={<PostDetails />} />
+          <Route path="*" element={<PageNotFound />} />
+          <Route path="/addpost" element={<AddPost />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </BrowserRouter> */}
     </div>
   );
 }
